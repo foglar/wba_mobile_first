@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 html,
 body,
@@ -161,6 +161,7 @@ body {
 	line-height: 1.5;
 	background-color: #fff;
 	padding: 5%;
+	margin: auto;
 }
 
 body > div {
@@ -184,6 +185,7 @@ img {
 
 .image img {
 	width: 30%;
+	height: auto;
 	min-width: 100px;
 	max-width: 180px;
 }
@@ -194,7 +196,7 @@ div.infographic {
 }
 
 div.infographic > h1 {
-	color:#7A9D8C;
+	color: #7a9d8c;
 	font-size: 1.5rem;
 }
 
@@ -248,11 +250,13 @@ div.infographic > div > div > img {
 
 .article-image {
 	width: 100%;
+	height: auto;
 }
 
 .article-image img {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 }
 
 .article-text {
@@ -280,9 +284,9 @@ div.infographic > div > div > img {
 		flex-direction: row-reverse;
 	}
 
-    #reverse > .article-image {
-        width: 300%;
-    }
+	#reverse > .article-image {
+		width: 300%;
+	}
 
 	.articles {
 		flex-direction: column;
@@ -303,7 +307,7 @@ div.infographic > div > div > img {
 		position: relative;
 		display: inline-block;
 	}
-	
+
 	.background {
 		position: absolute;
 		top: 55%;
@@ -312,15 +316,14 @@ div.infographic > div > div > img {
 		height: 100%;
 		transform: translate(-50%, -50%);
 		background-image: radial-gradient(
-			142% 91% at 83% 7%,
-			#f5e9f3 1%,
-			#ff000000 99%
-		),
-		radial-gradient(142% 91% at -6% 74%, #aba8bf 1%, #ff000000 99%);
+				142% 91% at 83% 7%,
+				#f5e9f3 1%,
+				#ff000000 99%
+			),
+			radial-gradient(142% 91% at -6% 74%, #aba8bf 1%, #ff000000 99%);
 		z-index: -1;
 		border-radius: 15px;
 	}
-	
 
 	.article-text {
 		font-size: 1rem;
@@ -333,5 +336,11 @@ div.infographic > div > div > img {
 @media (min-width: 1024px) {
 	.image img {
 		max-width: 600px;
+	}
+}
+
+@media (min-width: 2000px) {
+	body {
+		max-width: 1210px;
 	}
 }
