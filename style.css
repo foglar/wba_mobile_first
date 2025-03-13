@@ -269,7 +269,7 @@ div.infographic > div > div > img {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 	.infographic > div {
 		flex-direction: row;
 		flex-wrap: wrap;
