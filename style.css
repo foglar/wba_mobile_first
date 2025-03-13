@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: "Roboto", sans-serif;
+	color: #1a1a3f;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	line-height: 1;
+	padding: 0;
+
+	background-color: rgb(255, 255, 255);
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+	box-sizing: border-box;
+}
+
+/* RESET & BASE STYLES */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	color: #1a1a3f;
+	line-height: 1.5;
+	background-color: #fff;
+	padding: 5%;
+}
+
+body > div {
+	margin-top: 5rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+/* IMAGE GALLERY */
+.image {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+
+.image img {
+	width: 30%;
+	min-width: 100px;
+	max-width: 180px;
+}
+
+/* INFOGRAPHIC */
+div.infographic {
+	text-align: center;
+}
+
+div.infographic > h1 {
+	color:#7A9D8C;
+	font-size: 1.5rem;
+}
+
+div.infographic > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+div.infographic > div > div {
+	width: 45%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	font-weight: 600;
+}
+
+div.infographic > div > div > img {
+	width: 80px;
+	height: 80px;
+	margin: 10px 0;
+}
+
+/* ARTICLES */
+.articles {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.articles > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	border-radius: 15px;
+}
+
+.articles-decoration {
+	background-image: radial-gradient(
+			142% 91% at 83% 7%,
+			#f5e9f3 1%,
+			#ff000000 99%
+		),
+		radial-gradient(142% 91% at -6% 74%, #aba8bf 1%, #ff000000 99%);
+	background-size: 100% 100%;
+}
+
+.article-image {
+	width: 100%;
+}
+
+.article-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.article-text {
+	padding: 1rem;
+}
+
+.article-text > p {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+	.infographic > div {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	div.infographic > div > div {
+		width: 22%;
+	}
+
+	#reverse {
+		flex-direction: row-reverse;
+	}
+
+    #reverse > .article-image {
+        width: 300%;
+    }
+
+	.articles {
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.articles > div {
+		flex: 1;
+		flex-direction: row;
+		max-width: 90%;
+	}
+
+	.article-image {
+		width: auto;
+	}
+	.article-image {
+		position: relative;
+		display: inline-block;
+	}
+	
+	.background {
+		position: absolute;
+		top: 55%;
+		left: 48%;
+		width: 100%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		background-image: radial-gradient(
+			142% 91% at 83% 7%,
+			#f5e9f3 1%,
+			#ff000000 99%
+		),
+		radial-gradient(142% 91% at -6% 74%, #aba8bf 1%, #ff000000 99%);
+		z-index: -1;
+		border-radius: 15px;
+	}
+	
+
+	.article-text {
+		font-size: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1024px) {
+	.image img {
+		max-width: 600px;
+	}
+}
